@@ -21,7 +21,7 @@
 	<extension point="xbmc.addon.repository" name="PIRATES Repository">
 		<info compressed="false">https://raw.githubusercontent.com/addonnossosonho/PIRATES.repository/master/addons.xml</info>
 		<checksum>https://raw.githubusercontent.com/addonnossosonho/PIRATES.repository/master/addons.xml.md5</checksum>
-		<datadir zip="true">https://raw.githubusercontent.com/addonnossosonho/PIRATES.repository/master/repo/</datadir>
+		<datadir zip="true">https://github.com/addonnossosonho/PIRATES.repository/tree/master/repo/</datadir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary>PIRATES Addon</summary>
