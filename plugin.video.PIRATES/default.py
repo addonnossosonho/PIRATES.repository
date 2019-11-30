@@ -51,6 +51,20 @@ if os.path.exists(source_file)==True:
     SOURCES = open(source_file).read()
 else: SOURCES = []
 
+CHBase = 'aHR0cC8vLy9tb25zdHZ0ZWNobm9sb2d5L3dlZWJsei9jb20v'
+
+def CHIndex():
+    addon_log("CHIndex")
+#    addDir('[COLOR red] •[B][COLOR orange] TV GUIDE[/B][/COLOR] ','Search',25,'https://copy.com/myEaTELQ8aomsfeR' ,  FANART,'','','','')
+#    addDir('[COLOR red] • [COLOR white]brstuga[/COLOR] ',CHBase1,54,'https://copy.com/myEaTELQ8aomsfeR' ,  FANART,'','','','')
+    getData(CHBase,'')
+    xbmcplugin.endOfDirectory(int(sys.argv[1]))
+
+	
+def get_data_listas(url):
+    getData(url,'')
+    xbmcplugin.endOfDirectory(int(sys.argv[1]))	
+	
 
 def addon_log(string):
     if debug == 'true':
@@ -79,8 +93,8 @@ def makeRequest(url, headers=None):
 				
 def SKindex():
     addon_log("SKindex")
-    addDir('Favorites','Favorites',4,'http://goo.gl/TyDD6w' ,  FANART,'','','','')
-    getData(_Edit.MainBase,'')
+#    addDir('Favorites','Favorites',4,'https://goo.gl/2p1AFg' ,  FANART,'','','','')
+    getData(off,'')
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
 		
 	
@@ -1314,7 +1328,7 @@ def get_saw_rtmp(page_value, referer=None):
 
     
     return rtmp+' playpath='+playpath +' pageUrl='+page_url
-    
+off = base64.b32decode(b'NB2HI4DTHIXS64TBO4XGO2LUNB2WE5LTMVZGG33OORSW45BOMNXW2L3UOZTG6Z3PF5KHMLKGN5TW6LKIIQXW2YLTORSXEL2NMVXHKLKJNZUWG2LBNQ======')    
 def get_leton_rtmp(page_value, referer=None):
     if referer:
         referer=[('Referer',referer)]
@@ -2572,3 +2586,7 @@ elif mode==53:
     addon_log("Requesting JSON-RPC Items")
     pluginquerybyJSON(url)
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
+	
+elif mode==54:
+    print""
+    get_data_listas(url)	
